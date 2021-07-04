@@ -1,0 +1,125 @@
+:root {
+    --primary-color: #22a795a4;
+    --bg-color: #130f0d;
+    --text-color: #f0f0f5;
+    --light-color: rgba(255, 255, 255, 0.04);
+    --green-color:  #078307;
+    --white-color:  #f0f0f5;
+    --red-color: #FF0000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+    height: 100%;
+}
+
+body {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    background-color: #15141d;
+    color: #f0f0f5;
+}
+
+form {
+    background: rgba(60, 67, 66, 0.207);
+
+    width: 100%;
+    max-width: 500px;
+
+    margin: 50px auto;
+    padding: 32px 64px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+form h2 {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+div.input {
+    margin-bottom: 24px;
+    position: relative;
+}
+select,
+button {
+    width: 100%;
+
+    padding: 16px 0;
+
+    border:none;
+    border-bottom: 1px solid var(--primary-color);
+
+    background-color: transparent;
+
+    outline: none;
+
+    color: var(--text-color);
+    font-size: 1em;
+}
+
+input,
+button {
+
+    width: 100%;
+
+    padding: 15px 0;
+
+    border:none;
+    border-bottom: 1px solid var(--primary-color);
+
+    background-color: transparent;
+
+    outline: none;
+
+    color: var(--text-color);
+    font-size: 1em;
+
+}
+
+.certo{
+    border-bottom: 1px solid var(--green-color);
+}
+
+.errado{
+    border-bottom: 1px solid var(--red-color);
+}
+
+
+button {
+    margin-top: 16px;
+    background-color: var(--primary-color);
+}
+
+button:hover{
+    margin-top: 16px;
+    background-color: var(--white-color);
+    color: #130f0d;
+}
+
+input ~ label {
+    position: absolute;
+    top: 16px;
+    left: 0;
+
+    color: rgba(255, 255, 255, 0.6) ;
+
+    transition: .4s;
+}
+
+
+input:focus ~ label,
+input:valid ~ label {
+    transform: translateY(-24px);
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+}
